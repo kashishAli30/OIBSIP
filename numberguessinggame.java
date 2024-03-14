@@ -1,11 +1,10 @@
-
 import java.util.Random;
 import java.util.Scanner;
 
-public class numberGuessingGame {
+public class numberguessinggame {
     public static void main(String[] args) {
-        Random random = new Random();
-        int numberToGuess = random.nextInt(100) + 1;
+        Random rand = new Random();
+        int numberToGuess = rand.nextInt(100) + 1;
         Scanner scanner = new Scanner(System.in);
         int guess;
 
@@ -16,18 +15,18 @@ public class numberGuessingGame {
             guess = scanner.nextInt();
 
             if (guess == numberToGuess) {
-                System.out.println("Congratulations, you number is correct!");
+                System.out.println("Congratulations, you guessed the number!");
                 break;
             } else if (guess < numberToGuess) {
-                System.out.println("Your number is small. Try again:");
+                System.out.println("Your guess is too low. Try again:");
             } else {
-                System.out.println("your number is big. Try again:");
+                System.out.println("Your guess is too high. Try again:");
             }
         }
 
         scanner.close();
-        
     }
 }
+
 
 
